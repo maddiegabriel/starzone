@@ -1,0 +1,21 @@
+.weather {
+	width: 100%;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+#temp {
+	font-size: 4rem;
+	font-weight: 300;
+	line-height: 0.75;
+}
+
+#celsius {
+	font-size: 1.75rem;
+	vertical-align: super;
+}
+
+#condition {
+	font-size: 3.1rem;
+	vertical-align: center;
+}

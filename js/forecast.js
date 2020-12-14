@@ -5,14 +5,27 @@ let data = {
     datasets: [{
       data: [78, 40, 68],
       backgroundColor: [
-        "rgba(255, 0, 0, 0.5)",
-        "rgba(200, 50, 255, 0.5)",
+        "rgb(78,115,223,0.5)",
+        "rgb(246,194,62,0.5)",
         "rgba(0, 100, 255, 0.5)"
       ]
     }]
 };
 
+let options = {
+    scale: {
+        ticks: {
+            suggestedMin: 0,
+            suggestedMax: 100
+        }
+    },
+    legend: {
+        position: 'bottom',
+    }    
+}
+
 let forecast_chart = new Chart(forecast_canvas, {
     data: data,
+    options: options,
     type: 'polarArea'
 });

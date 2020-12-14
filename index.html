@@ -76,7 +76,7 @@
                         <div class="col-lg-7 mb-4 mt-4">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h5 class="m-0 font-weight-bold text-primary">Your Starzone News Feed</h5>
+                                    <h5 class="m-0 font-weight-bold text-primary">Starzone News Feed</h5>
                                 </div>
                                 <div class="card-body">
                                     <p>insert space news</p>
@@ -90,20 +90,109 @@
                             <!-- UPCOMING EVENTS -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Celestial Event Alert</h6>
+                                    <h5 class="m-0 font-weight-bold text-primary text-center">Celestial Event Alert</h5>
                                 </div>
                                 <div class="card-body">
-                                    <p>insert upcoming events</p>
+                                    <!-- Fluid width widget -->        
+                                    <!-- <div class="panel panel-danger">
+                                        <div class="panel-body">
+                                            <ul class="media-list">
+                                                <li class="media">
+                                                    <div class="media-left">
+                                                        <div class="panel panel-danger text-center date">
+                                                            <div class="panel-heading month">
+                                                                <span class="panel-title strong">
+                                                                    Mar
+                                                                </span>
+                                                            </div>
+                                                            <div class="panel-body day text-danger">
+                                                                23
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h4 class="media-heading">
+                                                            Pulvinar Mauris Eu
+                                                        </h4>
+                                                        <p>
+                                                            Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="media-left">
+                                                        <div class="panel panel-danger text-center date">
+                                                            <div class="panel-heading month">
+                                                                <span class="panel-title strong">
+                                                                    Jan
+                                                                </span>
+                                                            </div>
+                                                            <div class="panel-body text-danger day">
+                                                                16
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h4 class="media-heading">
+                                                            Aenean Consectetur Ultricies
+                                                        </h4>
+                                                        <p>
+                                                            Curabitur vel malesuada tortor, sit amet ultricies mauris. Aenean consectetur ultricies luctus.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="media-left">
+                                                        <div class="panel panel-danger text-center date">
+                                                            <div class="panel-heading month">
+                                                                <span class="panel-title strong all-caps">
+                                                                    Dec
+                                                                </span>
+                                                            </div>
+                                                            <div class="panel-body text-danger day">
+                                                                8
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h4 class="media-heading">
+                                                            Praesent Tincidunt
+                                                        </h4>
+                                                        <p>
+                                                            Sed convallis dignissim magna et dignissim. Praesent tincidunt sapien eu gravida dignissim.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="btn btn-default btn-block">More Events »</a>
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
 
                             <!-- CLOUD FORECAST -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">The Astronomer's Forecast</h6>
+                                    <h5 class="m-0 font-weight-bold text-primary text-center">The Astronomer's Forecast</h5>
                                 </div>
                                 <div class="card-body">
+                                    <!-- City -->
+                                    <div class="text-center mb-4">
+                                        <i class="fas fa-fw fa-map-marker-alt"></i>
+                                        <span id="city" class="h5">Guelph, Ontario</span>    
+                                    </div>
+
+                                    <!-- Polar Chart -->
                                     <canvas id="cloud-forecast" width="600" height="400"></canvas>
+
+                                    <!-- Temp -->
+                                    <div class="weather text-center mt-4 mb-4 text-gray-500">
+                                        <h1 class='temp' id='temp'>
+                                            <i id="condition" class="fas fa-fw fa-cloud-sun-rain mr-0"></i>
+                                            <span id="temp" class="ml-0 mr-0">4</span><span id="celsius"> &deg;C</span>
+                                        </h1>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -132,10 +221,10 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- JQuery-->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
