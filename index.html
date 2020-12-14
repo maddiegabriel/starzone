@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>starzone | follow the stars</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- Custom fonts-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-ui-kit.css" rel="stylesheet"> <!-- TODO :: cite me -->
+    <link href="css/starzone.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+
+        <!-- SIDEBAR TODO :: cite me -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- logo -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4" href="index.html">
+                <img id="starzone-logo" src="img/logo.png" width="100%" />
+            </a>
+
+            <!-- Sidebar Item - Dashboard -->
+            <hr class="sidebar-divider my-0 mt-4 mb-4">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-rocket"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Sidebar Item - Star Searcher -->
+            <li class="nav-item active">
+                <a class="nav-link" href="starsearcher.html">
+                    <i class="fas fa-fw fa-star"></i><span>Star Searcher</span></a>
+            </li>
+
+            <!-- Sidebar Item - Account Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Account</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="login.html">Login / Sign Up</a>
+                        <a class="collapse-item" href="settings.html">Settings</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Sidebar toggle -->
+            <div class="text-center d-none d-md-inline mt-4">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+
+        <!-- PAGE CONTENT -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="row mt-4">
+
+                        <!-- COLUMN 1 -->
+                        <div class="col-lg-7 mb-4 mt-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h5 class="m-0 font-weight-bold text-primary">Your Starzone News Feed</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>insert space news</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COLUMN 2 -->
+                        <div class="col-lg-5 mb-4 mt-4">
+
+                            <!-- UPCOMING EVENTS -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Celestial Event Alert</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>insert upcoming events</p>
+                                </div>
+                            </div>
+
+                            <!-- CLOUD FORECAST -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">The Astronomer's Forecast</h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="cloud-forecast" width="600" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Maddie G 2020</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <!-- "Scroll to Top" button -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- JQuery-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <!-- Custom Javascript -->
+    <script src="js/sb-ui-kit.js"></script>
+    <script src="js/starzone.js"></script>
+    <script src="js/forecast.js"></script>
+
+</body>
+
+</html>
