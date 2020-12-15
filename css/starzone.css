@@ -29,6 +29,64 @@ footer.sticky-footer {
 
 
 /* 
+ *  LOGIN PAGE
+ */
+.login-page {
+    background-color:#202225 !important;
+}
+
+#starzone-logo-big {
+    width: 75%;
+}
+
+#login-modal {
+    background-color: #2e3033;
+    max-width: 450px;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    margin-bottom: 8rem;
+}
+
+#login-button {
+    background-color: #4e8496;
+    font-size: 20px;
+    border: none;
+    color: #d7d7d8;
+    padding: 15px 60px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 15px 20px 40px 20px;
+}
+
+#login-button:hover {
+    background-color: #285d6e;
+}
+
+#email-field, #password-field {
+    background-color: #40444c;
+    color: #d7d7d8;
+    border-radius: 5px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 5px;
+    width: 85%;
+}
+
+#password-field {
+    -webkit-text-security: circle;
+}
+
+#email-field:focus, #password-field:focus {
+    outline: none;
+    background-color: #40444ca1;
+} 
+
+/* 
  *  SIDEBAR
  */
 .sidebar {

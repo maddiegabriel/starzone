@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>starzone | follow the stars</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- Custom fonts-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-ui-kit.css" rel="stylesheet"> <!-- TODO :: cite me -->
+    <link href="css/starzone.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+
+        <!-- SIDEBAR TODO :: cite me -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- logo -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4" href="login.html">
+                <img id="starzone-logo" src="img/logo.png" width="100%" />
+            </a>
+
+            <!-- Sidebar Item - Dashboard -->
+            <hr class="sidebar-divider my-0 mt-4 mb-4">
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="fas fa-fw fa-rocket"></i>
+                    <span>&nbsp;Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Item - Star Searcher -->
+            <li class="nav-item active">
+                <a class="nav-link" href="starsearcher.html">
+                    <i class="fas fa-fw fa-star"></i>
+                    <span>&nbsp;Star Searcher</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Item - Account Menu -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>&nbsp;Account</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="settings.html">Settings</a>
+                        <a class="collapse-item" href="login.html">Logout</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Sidebar toggle -->
+            <div class="text-center d-none d-md-inline mt-4">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+
+        <!-- PAGE CONTENT -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="row mt-4">
+
+                        <div class="col-lg-7 mb-4">
+
+                            <!-- NEWSFEED -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold">Starzone News Feed</h4>
+                                </div>
+                                <div class="card-body newsfeed">
+                                    <div class="d-flex flex-row"></div>
+
+                                    <!-- news item #1 -->
+                                    <div class="row p-3 newsfeed-item">
+                                        <div class="col-md-4">
+                                            <div><img class="newsfeed-image img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <a href="www.google.com" target="_blank"><h4>Space is on fire!</h4></a>
+                                                <span>You are not gonna believe this news!</span>
+                                                <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                                    <div class="d-flex">
+                                                        <a href="www.google.com" target="_blank"><img class="rounded-circle" src="https://i.imgur.com/uSlStch.jpg" width="55" height="55"></a>
+                                                        <div class="d-flex flex-column ml-2 mt-1">
+                                                            <a href="www.google.com" target="_blank"><h6>Space News Central</h6></a>
+                                                            <span>Dec 12, 2020</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- news item #2 -->
+                                    <div class="row p-3 newsfeed-item">
+                                        <div class="col-md-4">
+                                            <div><img class="newsfeed-image img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <a href="www.google.com" target="_blank"><h4>Space is on fire!</h4></a>
+                                                <span>You are not gonna believe this news!</span>
+                                                <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                                    <div class="d-flex">
+                                                        <a href="www.google.com" target="_blank"><img class="rounded-circle" src="https://i.imgur.com/uSlStch.jpg" width="55" height="55"></a>
+                                                        <div class="d-flex flex-column ml-2 mt-1">
+                                                            <a href="www.google.com" target="_blank"><h6>Space News Central</h6></a>
+                                                            <span>Dec 12, 2020</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- news item #3 -->
+                                    <div class="row p-3 newsfeed-item">
+                                        <div class="col-md-4">
+                                            <div><img class="newsfeed-image img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <a href="www.google.com" target="_blank"><h4>Space is on fire!</h4></a>
+                                                <span>You are not gonna believe this news!</span>
+                                                <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                                    <div class="d-flex">
+                                                        <a href="www.google.com" target="_blank"><img class="rounded-circle" src="https://i.imgur.com/uSlStch.jpg" width="55" height="55"></a>
+                                                        <div class="d-flex flex-column ml-2 mt-1">
+                                                            <a href="www.google.com" target="_blank"><h6>Space News Central</h6></a>
+                                                            <span>Dec 12, 2020</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- news item #4 -->
+                                    <div class="row p-3 newsfeed-item">
+                                        <div class="col-md-4">
+                                            <div><img class="newsfeed-image img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <a href="www.google.com" target="_blank"><h4>Space is on fire!</h4></a>
+                                                <span>You are not gonna believe this news!</span>
+                                                <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                                    <div class="d-flex">
+                                                        <a href="www.google.com" target="_blank"><img class="rounded-circle" src="https://i.imgur.com/uSlStch.jpg" width="55" height="55"></a>
+                                                        <div class="d-flex flex-column ml-2 mt-1">
+                                                            <a href="www.google.com" target="_blank"><h6>Space News Central</h6></a>
+                                                            <span>Dec 12, 2020</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- news item #5 -->
+                                    <div class="row p-3 newsfeed-item">
+                                        <div class="col-md-4">
+                                            <div><img class="newsfeed-image img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <a href="www.google.com" target="_blank"><h4>Space is on fire!</h4></a>
+                                                <span>You are not gonna believe this news!</span>
+                                                <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                                    <div class="d-flex">
+                                                        <a href="www.google.com" target="_blank"><img class="rounded-circle" src="https://i.imgur.com/uSlStch.jpg" width="55" height="55"></a>
+                                                        <div class="d-flex flex-column ml-2 mt-1">
+                                                            <a href="www.google.com" target="_blank"><h6>Space News Central</h6></a>
+                                                            <span>Dec 12, 2020</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- news item #6 -->
+                                    <div class="row p-3 newsfeed-item">
+                                        <div class="col-md-4">
+                                            <div><img class="newsfeed-image img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <a href="www.google.com" target="_blank"><h4>Space is on fire!</h4></a>
+                                                <span>You are not gonna believe this news!</span>
+                                                <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                                    <div class="d-flex">
+                                                        <a href="www.google.com" target="_blank"><img class="rounded-circle" src="https://i.imgur.com/uSlStch.jpg" width="55" height="55"></a>
+                                                        <div class="d-flex flex-column ml-2 mt-1">
+                                                            <a href="www.google.com" target="_blank"><h6>Space News Central</h6></a>
+                                                            <span>Dec 12, 2020</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 mb-4">
+
+                            <!-- UPCOMING EVENTS -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold text-center">Celestial Event Alert</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="celestial-events">
+                                        <li class="event">
+                                            <div class="event-date">
+                                                <span class="event-day">18</span>
+                                                <div class="event-month">dec</div>
+                                            </div>
+                                            <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aut unde facili.</p>
+                                        </li>
+                                        <li class="event">
+                                            <div class="event-date">
+                                                <span class="event-day">22</span>
+                                                <div class="event-month">jan</div>
+                                            </div>
+                                            <p class="event-description">Space, the final frontier. These are the voyages of the Starship Enterprise.</p>
+                                        </li>
+                                        <li class="event">
+                                            <div class="event-date">
+                                                <span class="event-day">04</span>
+                                                <div class="event-month">feb</div>
+                                            </div>
+                                            <p class="event-description">Space, the final frontier. These are the voyages of the Starship Enterprise.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- CLOUD FORECAST -->
+                            <div class="card shadow mb-0">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold text-center">The Astronomer's Forecast</h5>
+                                </div>
+                                <div class="card-body">
+                                    <!-- City -->
+                                    <div class="text-center mb-4">
+                                        <i class="fas fa-fw fa-map-marker-alt"></i>
+                                        <span id="city" class="h4">Guelph, Ontario</span>    
+                                    </div>
+
+                                    <!-- Polar Chart -->
+                                    <center>
+                                        <div class="mb-4 justify-content-center" id="cloud-forecast"></div>
+                                    </center>
+
+                                    <!-- Temp -->
+                                    <div class="forecast text-center mt-2 mb-2 text-gray-500">
+                                        <h1 id='temp'>
+                                            <i id="forecast-icon" class="fas fa-fw fa-cloud-sun-rain mr-0"></i>
+                                            <span class="ml-0 mr-0">4</span><span id="celsius"> &deg;C</span>
+                                        </h1>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Maddie G 2020</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- ApexCharts JS -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- Custom Javascript -->
+    <script src="js/starzone.js"></script>
+
+</body>
+
+</html>
