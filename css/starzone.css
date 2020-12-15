@@ -33,7 +33,6 @@ footer.sticky-footer {
  */
 .sidebar {
     background-color:#202225;
-    color: #99aab5;
 }
 
 .sidebar .nav-item .nav-link span {
@@ -50,9 +49,17 @@ footer.sticky-footer {
 }
 
 .collapse-item {
-    color: #202225 !important; 
+    color: #c4c5c6 !important; 
+    font-size: 0.9rem;
 }
 
+.collapse-inner {
+    background-color: #40444c;
+}
+
+.collapse-item:hover {
+    background-color: #36393f !important;
+}
 
 /* 
  *  NEWS FEED CARD
@@ -122,17 +129,17 @@ footer.sticky-footer {
     color: #f2f2f2;
 }
 
+
 /* 
- *  WEATHER FORECAST
+ *  ASTRONOMER'S FORECAST
  */
- 
-.weather {
+.forecast {
 	width: 100%;
 	margin-top: 20px;
     display: inline-block;
 }
 
-#temp, #celsius, #condition {
+#temp, #celsius, #forecast-icon {
     color: #99aab5;
 }
 
@@ -146,6 +153,6 @@ footer.sticky-footer {
     vertical-align: super;
 }
 
-#condition {
+#forecast-icon {
 	font-size: 3.1rem;
 }
