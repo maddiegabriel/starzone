@@ -19,61 +19,15 @@
 
 </head>
 
-<body id="page-top" onload="setTimeout(load_dashboard, 4000);">
+<body id="page-top" onload="setTimeout(load_dash, 4000);">
     <div id="wrapper">
 
-        <!-- SIDEBAR TODO :: cite me -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- logo -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4" href="login.html">
-                <img id="starzone-logo" src="img/logo.png" width="100%" />
-            </a>
-
-            <!-- Sidebar Item - Dashboard -->
-            <hr class="sidebar-divider my-0 mt-4 mb-4">
-            <li class="nav-item active">
-                <a class="nav-link" href="dashboard.html">
-                    <i class="fas fa-fw fa-rocket"></i>
-                    <span>&nbsp;Dashboard</span>
-                </a>
-            </li>
-
-            <!-- Sidebar Item - Star Searcher -->
-            <li class="nav-item active">
-                <a class="nav-link" href="starsearcher.html">
-                    <i class="fas fa-fw fa-star"></i>
-                    <span>&nbsp;Star Searcher</span>
-                </a>
-            </li>
-
-            <!-- Sidebar Item - Account Menu -->
-            <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>&nbsp;Account</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="settings.html">Settings</a>
-                        <a class="collapse-item" href="index.html">Logout</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Sidebar toggle -->
-            <div class="text-center d-none d-md-inline mt-4">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        
         <!-- PAGE CONTENT -->
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <div class="container-fluid">
                     <!-- logo -->
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center" style="min-height: 60rem;">
                         <img id="starzone-logo-loading" class="animation-target" src="img/loading.png"/>
                     </div>
                 </div>
@@ -109,15 +63,3 @@
 </body>
 
 </html>
-
-<script>
-    window.onload = function() {
-        setTimeout(load_dashboard, 4000)
-        
-    }
-
-    function load_dashboard() {
-        window.location.replace("dashboard.html");
-    }
-
-</script>

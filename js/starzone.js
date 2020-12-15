@@ -1,12 +1,20 @@
 // 
-//  LOGIN
+//  LOGIN / REGISTER
 //
 function login() {
-    window.location.href = "loading.html";
+    window.location.href = "load_dash.html";
 }
 
-function load_dashboard() {
+function register() {
+    window.location.href = "load_settings.html";
+}
+
+function load_dash() {
     window.location.replace("dashboard.html");
+}
+
+function load_settings() {
+    window.location.replace("settings.html");
 }
 
 // 

@@ -29,7 +29,7 @@ footer.sticky-footer {
 
 
 /* 
- *  LOGIN PAGE
+ *  LOGIN/REGISTER PAGES
  */
 .login-page {
     background-color:#202225 !important;
@@ -86,6 +86,7 @@ footer.sticky-footer {
     background-color: #383c46c4;
 } 
 
+
 /* 
  *  SIDEBAR
  */
@@ -96,14 +97,6 @@ footer.sticky-footer {
 .sidebar .nav-item .nav-link span {
     font-size: 1rem;
     color: #c4c5c6 !important;
-}
-
-.sidebar .nav-item .nav-link span:hover {
-    color: #e1ad01 !important;
-}
-
-.sidebar .nav-item .nav-link i:hover {
-    color: #e1ad01 !important;
 }
 
 .collapse-item {
@@ -118,6 +111,12 @@ footer.sticky-footer {
 .collapse-item:hover {
     background-color: #36393f !important;
 }
+
+/* TODO: FIX SIDEBAR HOVER */
+.sidebar .nav-item .nav-link i:hover, .sidebar .nav-item .nav-link span:hover {
+    color: #e1ad01 !important;
+}
+
 
 /* 
  *  NEWS FEED CARD
@@ -227,7 +226,8 @@ footer.sticky-footer {
 
 #starzone-logo-loading {
     width: 6%;
-    margin-top: 25%;
+    height: 6%;
+    margin-top: 21%;
 }
 
 @-webkit-keyframes animation { 

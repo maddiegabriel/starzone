@@ -19,35 +19,16 @@
 
 </head>
 
-<body id="page-top login-page">
-    <div id="wrapper" class="login-page">
+<body id="page-top" onload="setTimeout(load_settings, 4000);">
+    <div id="wrapper">
 
         <!-- PAGE CONTENT -->
         <div id="content-wrapper" class="d-flex flex-column">
-            <div id="content" class="login-page">
-                <div class="container-fluid login-page">
-
+            <div id="content">
+                <div class="container-fluid">
                     <!-- logo -->
                     <div class="row justify-content-center">
-                        <a class="d-flex justify-content-center mt-4" href="index.html">
-                            <img id="starzone-logo-big" src="img/big-logo.png" width="100%" />
-                        </a>
-                    </div>
-                    
-                    <!-- login form -->
-                    <div class="row justify-content-center mb-4">
-                        <div id="login-modal" class="text-center">
-                            <form>
-                                <input id="email-field" type="text" placeholder="username">
-                                <input id="password-field" type="text" placeholder="password">
-                                <input id="login-button" type="button" value="log in" onclick="login();">
-                            </form>
-                        
-                            <div>
-                                <a class="mb-4" href="register.html">New to starzone? Register here!</a>
-                            </div>
-                        </div>
-
+                        <img id="starzone-logo-loading" class="animation-target" src="img/loading.png"/>
                     </div>
                 </div>
             </div>
