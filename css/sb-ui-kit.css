@@ -58,9 +58,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #858796;
+  color: #c4c5c6;
   text-align: left;
-  background-color: #fff;
+  background-color: #292b2f;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -9987,7 +9987,7 @@ a:focus {
 }
 
 footer.sticky-footer {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   flex-shrink: 0;
 }
 

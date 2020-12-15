@@ -41,15 +41,14 @@
             <!-- Sidebar Item - Star Searcher -->
             <li class="nav-item active">
                 <a class="nav-link" href="starsearcher.html">
-                    <i class="fas fa-fw fa-star"></i><span>Star Searcher</span></a>
+                    <i class="fas fa-fw fa-star"></i><span>&nbsp;Star Searcher</span></a>
             </li>
 
             <!-- Sidebar Item - Account Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Account</span>
+                    <i class="fas fa-fw fa-cog"></i><span class="font-weight-bold">&nbsp;Account</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -76,12 +75,12 @@
                         <div class="col-lg-7 mb-4">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h5 class="m-0 font-weight-bold text-primary">Starzone News Feed</h5>
+                                    <h4 class="m-0 font-weight-bold">Starzone News Feed</h4>
                                 </div>
                                 <div class="card-body newsfeed-inner">
                                     <div class="d-flex flex-row"></div>
                                     <!-- NEWS ITEM #1 -->
-                                    <div class="row news-card p-3 bg-white">
+                                    <div class="row news-card p-3">
                                         <div class="col-md-4">
                                             <div class="feed-image"><img class="news-feed-image rounded img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
                                         </div>
@@ -101,7 +100,7 @@
                                         </div>
                                     </div>
                                     <!-- NEWS ITEM #1 -->
-                                    <div class="row news-card p-3 bg-white">
+                                    <div class="row news-card p-3">
                                         <div class="col-md-4">
                                             <div class="feed-image"><img class="news-feed-image rounded img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
                                         </div>
@@ -121,7 +120,7 @@
                                         </div>
                                     </div>
                                     <!-- NEWS ITEM #1 -->
-                                    <div class="row news-card p-3 bg-white">
+                                    <div class="row news-card p-3">
                                         <div class="col-md-4">
                                             <div class="feed-image"><img class="news-feed-image rounded img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
                                         </div>
@@ -141,7 +140,7 @@
                                         </div>
                                     </div>
                                     <!-- NEWS ITEM #1 -->
-                                    <div class="row news-card p-3 bg-white">
+                                    <div class="row news-card p-3">
                                         <div class="col-md-4">
                                             <div class="feed-image"><img class="news-feed-image rounded img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
                                         </div>
@@ -161,7 +160,7 @@
                                         </div>
                                     </div>
                                     <!-- NEWS ITEM #1 -->
-                                    <div class="row news-card p-3 bg-white">
+                                    <div class="row news-card p-3">
                                         <div class="col-md-4">
                                             <div class="feed-image"><img class="news-feed-image rounded img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
                                         </div>
@@ -181,7 +180,7 @@
                                         </div>
                                     </div>
                                     <!-- NEWS ITEM #1 -->
-                                    <div class="row news-card p-3 bg-white">
+                                    <div class="row news-card p-3">
                                         <div class="col-md-4">
                                             <div class="feed-image"><img class="news-feed-image rounded img-fluid img-responsive" src="https://i.imgur.com/ZKbpmaU.jpg"></div>
                                         </div>
@@ -210,7 +209,7 @@
                             <!-- UPCOMING EVENTS -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h5 class="m-0 font-weight-bold text-primary text-center">Celestial Event Alert</h5>
+                                    <h4 class="m-0 font-weight-bold text-center">Celestial Event Alert</h5>
                                 </div>
                                 <div class="card-body">
                                     <ul class="events__list">
@@ -242,17 +241,17 @@
                             <!-- CLOUD FORECAST -->
                             <div class="card shadow mb-0">
                                 <div class="card-header py-3">
-                                    <h5 class="m-0 font-weight-bold text-primary text-center">The Astronomer's Forecast</h5>
+                                    <h4 class="m-0 font-weight-bold text-center">The Astronomer's Forecast</h5>
                                 </div>
                                 <div class="card-body">
                                     <!-- City -->
                                     <div class="text-center mb-4">
                                         <i class="fas fa-fw fa-map-marker-alt"></i>
-                                        <span id="city" class="h5">Guelph, Ontario</span>    
+                                        <span id="city" class="h4">Guelph, Ontario</span>    
                                     </div>
 
                                     <!-- Polar Chart -->
-                                    <canvas class="mb-4" id="cloud-forecast" width="600" height="400"></canvas>
+                                    <div class="mb-4" id="cloud-forecast" width="600" height="400"></div>
 
                                     <!-- Temp -->
                                     <div class="weather text-center mt-2 mb-2 text-gray-500">
@@ -297,6 +296,7 @@
 
     <!-- Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <!-- Custom Javascript -->
     <script src="js/sb-ui-kit.js"></script>

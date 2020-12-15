@@ -1,34 +1,36 @@
-let forecast_canvas = document.getElementById("cloud-forecast");
-
-let data = {
-    labels: ["Visibility","Precipitation","Wind"],
-    datasets: [{
-      data: [75, 63, 36],
-      backgroundColor: [
-        "rgb(78,115,223,0.3)",
-        "rgb(246,194,62,0.3)",
-        "rgba(0, 100, 255, 0.3)"
-      ]
+let options = {
+    chart: {
+        type: 'polarArea',
+    },
+    series: [14, 23, 21, 17, 24],
+    labels: ['Wind', 'Visibility', 'Precipitation', 'Darkness', 'Cloud Cover'],
+    stroke: {
+        colors: ['#fff']
+    },
+    colors: ['#546E7A', '#4a92a8', '#60ccd9', '#bbf0e8', '#61908a'],
+    dataLabels: {
+        style: {
+            fontSize: '14px',
+        },
+    },
+    fill: {
+        opacity: 0.8
+    },
+    legend: {
+        position: 'bottom'
+    },
+    responsive: [{
+        breakpoint: 480,
+        options: {
+            chart: {
+                width: 200
+            }
+        }
     }]
 };
 
-let options = {
-    scale: {
-        ticks: {
-            suggestedMin: 0,
-            suggestedMax: 100
-        }
-    },
-    legend: {
-        position: 'bottom',
-    }    
-}
-
-let forecast_chart = new Chart(forecast_canvas, {
-    data: data,
-    options: options,
-    type: 'polarArea'
-});
+let cloud_chart = new ApexCharts(document.querySelector("#cloud-forecast"), options);
+cloud_chart.render();
 
 // Toggle the side navigation
 $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
