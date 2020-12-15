@@ -1,6 +1,17 @@
 // 
-//  CLOUD FORECAST POLAR AREA CHART (uses ApexCharts JS library)
+//  LOGIN
+//
+function login() {
+    window.location.href = "loading.html";
+}
+
+function load_dashboard() {
+    window.location.replace("dashboard.html");
+}
+
 // 
+//  CLOUD FORECAST POLAR AREA CHART (uses ApexCharts JS library)
+//
 let options = {
     chart: {
         type: 'polarArea',
