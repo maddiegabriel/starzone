@@ -1,3 +1,13 @@
+/* 
+ *  GENERAL (APP-WIDE)
+ */
+.capitalize {
+    text-transform: uppercase;
+}
+
+/* 
+ *  WEATHER FORECAST
+ */
 .weather {
 	width: 100%;
 	margin-top: 20px;
@@ -18,4 +28,101 @@
 #condition {
 	font-size: 3.1rem;
 	vertical-align: center;
+}
+
+/* 
+ *  CELESTIAL EVENTS
+ */
+
+.events__heading {
+  margin: 0px 0px 10px 0px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.events__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.events__item {
+  display: flex;
+  padding: 12px 0px;
+  border-bottom: solid 1px #f1f1f1;
+}
+
+.events__item:hover {
+  cursor: pointer !important;
+}
+
+.events__item:last-child {
+  border: none;
+}
+
+.events__date {
+  text-align: center;
+  margin-right: 10px;
+  padding-left: 10px;
+  border-left: 3px solid #eaeaea;
+}
+
+.events__day {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.events__month {
+  color: #666;
+  font-size: 14px;
+  text-transform: lowercase;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.events__desc {
+  color: #555;
+  font-size: 13px;
+  margin: 0;
+}
+
+.events__item:hover .events__date {
+  border-left: 3px solid #84b2c2;
+}
+
+.events__item:hover .events__desc {
+  color: SteelBlue;
+}
+
+
+/* 
+ *  NEWS FEED
+ */
+
+.newsfeed-inner {
+    max-height: 48.5rem;
+    overflow: scroll;
+}
+
+.news-card {
+    border-radius: 8px
+}
+
+.news-feed-image {
+    border-radius: 8px;
+    width: 100%
+}
+
+.date {
+    font-size: 12px
+}
+
+.username {
+    color: blue
+}
+
+.share {
+    color: blue
 }
