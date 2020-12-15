@@ -1,38 +1,39 @@
+// 
+//  CLOUD FORECAST POLAR AREA CHART (uses ApexCharts JS library)
+// 
 let options = {
     chart: {
         type: 'polarArea',
+        width: '80%',
     },
     series: [14, 23, 21, 17, 24],
     labels: ['Wind', 'Visibility', 'Precipitation', 'Darkness', 'Cloud Cover'],
-    stroke: {
-        colors: ['#fff']
-    },
     colors: ['#546E7A', '#4a92a8', '#60ccd9', '#bbf0e8', '#61908a'],
-    dataLabels: {
-        style: {
-            fontSize: '14px',
-        },
+    yaxis: {
+        show: false,
     },
     fill: {
         opacity: 0.8
     },
     legend: {
-        position: 'bottom'
+        position: 'bottom',
+        fontSize: '17px',
+        labels: {
+            colors: '#c4c5c6',
+        },
     },
-    responsive: [{
-        breakpoint: 480,
-        options: {
-            chart: {
-                width: 200
-            }
-        }
-    }]
+
 };
 
 let cloud_chart = new ApexCharts(document.querySelector("#cloud-forecast"), options);
 cloud_chart.render();
 
-// Toggle the side navigation
+
+// 
+//  SIDE NAVIGATION
+// 
+  
+// Toggle the side navigation when clicked
 $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
     $("body").toggleClass("sidebar-toggled");
     $(".sidebar").toggleClass("toggled");
@@ -40,19 +41,20 @@ $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
     if ($(".sidebar").hasClass("toggled")) {
         $('.sidebar .collapse').collapse('hide');
         document.getElementById("starzone-logo").src = "img/favicon.png";
-        document.getElementById("starzone-logo").style.maxWidth = "3rem";
+        document.getElementById("starzone-logo").style.maxWidth = "4rem";
     } else {
         document.getElementById("starzone-logo").src = "img/logo.png";
         document.getElementById("starzone-logo").style.maxWidth = "20rem";
     }
 });
 
-// Close any open menu accordions when window is resized below 768px
+
+// Close menu accordions when window is small
 $(window).resize(function() {
     if ($(window).width() < 768) {
         $('.sidebar .collapse').collapse('hide');
         document.getElementById("starzone-logo").src = "img/favicon.png";
-        document.getElementById("starzone-logo").style.maxWidth = "3rem";
+        document.getElementById("starzone-logo").style.maxWidth = "4rem";
     } else {
         document.getElementById("starzone-logo").src = "img/logo.png";
         document.getElementById("starzone-logo").style.maxWidth = "20rem";

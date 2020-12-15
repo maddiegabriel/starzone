@@ -1,26 +1,16 @@
 /* 
  *  GENERAL (APP-WIDE)
  */
-
- * {
-    color:#c4c5c6 !important;
+a {
+    color: #99aab5 !important;
 }
 
-a {
-    color: #e1ad01;
+a:hover {
+    color: #e1ad01 !important;
 }
 
 #content-wrapper {
     background-color: #292b2f !important;
-}
-
-.sidebar {
-    background-color:#202225;
-    color: #99aab5;
-}
-
-.sidebar .nav-item .nav-link span {
-    font-size: 1rem;
 }
 
 .card {
@@ -37,18 +27,117 @@ footer.sticky-footer {
     background-color: #36393f !important;
 }
 
+
+/* 
+ *  SIDEBAR
+ */
+.sidebar {
+    background-color:#202225;
+    color: #99aab5;
+}
+
+.sidebar .nav-item .nav-link span {
+    font-size: 1rem;
+    color: #c4c5c6 !important;
+}
+
+.sidebar .nav-item .nav-link span:hover {
+    color: #e1ad01 !important;
+}
+
+.sidebar .nav-item .nav-link i:hover {
+    color: #e1ad01 !important;
+}
+
+.collapse-item {
+    color: #202225 !important; 
+}
+
+
+/* 
+ *  NEWS FEED CARD
+ */
+.newsfeed {
+    max-height: 56.5rem;
+    overflow: scroll;
+}
+
+.newsfeed-item {
+    border-radius: 10px;
+    background-color: #36393f;
+    padding: 5px 5px;
+}
+
+.newsfeed-image {
+    border-radius: 10px;
+}
+
+
+/* 
+ *  CELESTIAL EVENTS
+ */
+.celestial-events {
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+.event {
+    display: flex;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+.event:hover {
+    cursor: pointer !important;
+    background-color: #292b2f;
+}
+
+.event-date {
+    padding-left: 10px;
+    border-left: 3px solid #eaeaea;
+}
+
+.event-day {
+    color: #84b2c2;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.event-month {
+    color: #99aab5;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.event-description {
+    margin: 3px 0 5px 20px;
+}
+
+.event:hover .event-date {
+    border-left: 3px solid #84b2c2;
+}
+
+.event:hover .event-description {
+    color: #f2f2f2;
+}
+
 /* 
  *  WEATHER FORECAST
  */
+ 
 .weather {
 	width: 100%;
 	margin-top: 20px;
-	display: inline-block;
+    display: inline-block;
+}
+
+#temp, #celsius, #condition {
+    color: #99aab5;
 }
 
 #temp {
 	font-size: 4rem;
-	font-weight: 300;
+    font-weight: 300;
 }
 
 #celsius {
@@ -58,105 +147,4 @@ footer.sticky-footer {
 
 #condition {
 	font-size: 3.1rem;
-	vertical-align: center;
 }
-
-/* 
- *  CELESTIAL EVENTS
- */
-
-.events__heading {
-  margin: 0px 0px 10px 0px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.events__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.events__item {
-  display: flex;
-  padding: 12px 0px;
-  border-bottom: solid 1px #f1f1f1;
-}
-
-.events__item:hover {
-  cursor: pointer !important;
-}
-
-.events__item:last-child {
-  border: none;
-}
-
-.events__date {
-  text-align: center;
-  margin-right: 10px;
-  padding-left: 10px;
-  border-left: 3px solid #eaeaea;
-}
-
-.events__day {
-  color: #000;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.events__month {
-  color: #666;
-  font-size: 14px;
-  text-transform: lowercase;
-  font-weight: 600;
-  line-height: 1;
-}
-
-.events__desc {
-  color: #555;
-  font-size: 13px;
-  margin: 0;
-}
-
-.events__item:hover .events__date {
-  border-left: 3px solid #84b2c2;
-}
-
-.events__item:hover .events__desc {
-  color: white;
-}
-
-
-/* 
- *  NEWS FEED
- */
-
-.newsfeed-inner {
-    max-height: 48.5rem;
-    overflow: scroll;
-}
-
-.news-card {
-    border-radius: 8px;
-    background-color: #36393f;
-    margin-bottom: 12px;
-}
-
-.news-feed-image {
-    border-radius: 8px;
-    width: 100%
-}
-
-.date {
-    font-size: 12px
-}
-
-.username {
-    color: white
-}
-
-.share {
-    color: white
-}
-
