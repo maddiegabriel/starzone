@@ -1,4 +1,31 @@
 // 
+// ACCOUNT SETTINGS
+// 
+function update_details() {
+    let fields = document.getElementsByClassName('update-detail-field');
+    for (i = 0; i < fields.length; i++) {
+        fields[i].style.background = 'rgb(202 202 202)';
+        fields[i].style.color = '#383c46';
+        fields[i].readOnly = false;
+    }
+    document.getElementById('save-btn').style.display = "inline";
+    document.getElementById('update-btn').style.display = "none";
+       
+}
+
+function save_details() {
+    let fields = document.getElementsByClassName('update-detail-field');
+    for (i = 0; i < fields.length; i++) {
+        fields[i].style.background = '#383c46';
+        fields[i].style.color = '#757575';
+        fields[i].readOnly = true;
+    }
+    document.getElementById('save-btn').style.display = "none";
+    document.getElementById('update-btn').style.display = "inline";
+}
+
+
+// 
 //  LOGIN / REGISTER
 //
 function login() {
@@ -16,36 +43,6 @@ function load_dash() {
 function load_settings() {
     window.location.replace("settings.html");
 }
-
-// 
-//  CLOUD FORECAST POLAR AREA CHART (uses ApexCharts JS library)
-//
-let options = {
-    chart: {
-        type: 'polarArea',
-        width: '80%',
-    },
-    series: [14, 23, 21, 17, 24],
-    labels: ['Wind', 'Visibility', 'Precipitation', 'Darkness', 'Cloud Cover'],
-    colors: ['#546E7A', '#4a92a8', '#60ccd9', '#bbf0e8', '#61908a'],
-    yaxis: {
-        show: false,
-    },
-    fill: {
-        opacity: 0.8
-    },
-    legend: {
-        position: 'bottom',
-        fontSize: '17px',
-        labels: {
-            colors: '#c4c5c6',
-        },
-    },
-
-};
-
-let cloud_chart = new ApexCharts(document.querySelector("#cloud-forecast"), options);
-cloud_chart.render();
 
 
 // 
@@ -87,3 +84,35 @@ $(window).resize(function() {
     };
 });
 
+
+// 
+//  CLOUD FORECAST POLAR AREA CHART (uses ApexCharts JS library)
+//
+function render_chart() {
+    let options = {
+        chart: {
+            type: 'polarArea',
+            width: '80%',
+        },
+        series: [14, 23, 21, 17, 24],
+        labels: ['Wind', 'Visibility', 'Precipitation', 'Darkness', 'Cloud Cover'],
+        colors: ['#546E7A', '#4a92a8', '#60ccd9', '#bbf0e8', '#61908a'],
+        yaxis: {
+            show: false,
+        },
+        fill: {
+            opacity: 0.8
+        },
+        legend: {
+            position: 'bottom',
+            fontSize: '17px',
+            labels: {
+                colors: '#c4c5c6',
+            },
+        },
+    
+    };
+    
+    let cloud_chart = new ApexCharts(document.querySelector("#cloud-forecast"), options);
+    cloud_chart.render();
+}

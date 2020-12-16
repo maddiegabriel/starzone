@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>starzone | follow the stars</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- Custom fonts-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-ui-kit.css" rel="stylesheet"> <!-- TODO :: cite me -->
+    <link href="css/starzone.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+
+        <!-- SIDEBAR TODO :: cite me -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- logo -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4" href="dashboard.html">
+                <img id="starzone-logo" src="img/logo.png" width="100%" />
+            </a>
+
+            <!-- Sidebar Item - Dashboard -->
+            <hr class="sidebar-divider my-0 mt-4 mb-4">
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="fas fa-fw fa-rocket"></i>
+                    <span>&nbsp;Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Item - Star Searcher -->
+            <li class="nav-item active">
+                <a class="nav-link" href="starsearcher.html">
+                    <i class="fas fa-fw fa-star"></i>
+                    <span>&nbsp;Star Searcher</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Item - Account Menu -->
+            <li class="nav-item active mb-4">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>&nbsp;Account</span>
+                </a>
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="settings.html" style="color: #e1ad01 !important;">Settings</a>
+                        <a class="collapse-item" href="index.html">Logout</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Sidebar toggle -->
+            <div class="text-center d-none d-md-inline mt-4">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+
+        <!-- PAGE CONTENT -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="row mt-4">
+
+                        <div class="col-lg-8 mb-4">
+
+                            <!-- account settings -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold">Starzone Account Settings</h5>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- personal info -->
+                                    <div class="row gutters">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <h5 class="mb-3 blue-header">Your Personal Details</h5>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="fname">Name</label>
+                                                <input readonly="readonly" type="text" class="form-control update-detail-field" placeholder="Maddie Gabriel">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="lname">Username</label>
+                                                <input readonly="readonly" type="text" class="form-control update-detail-field" placeholder="mabbie_lovez_stars">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input readonly="readonly" type="text" class="form-control update-detail-field" placeholder="mgabri02@uoguelph.ca">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="phone">Phone</label>
+                                                <input readonly="readonly" type="text" class="form-control update-detail-field" placeholder="(905) 666-6666">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="location">Location</label>
+                                                <input readonly="readonly" type="url" class="form-control update-detail-field" placeholder="Guelph, Ontario, Canada">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- update button -->
+                                    <div class="row gutters">
+                                        <div class="col-xl-12 col-lg-11 col-md-12 col-sm-12 col-12">
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-primary" id="update-btn" onclick="update_details()">Update Personal Details</button>
+                                                <button type="button" class="btn btn-primary" id="save-btn" onclick="save_details()"  data-toggle="modal" data-target="#success2">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>   
+    
+                                    <!-- Success Modal -->
+                                    <div id="modalthing">
+                                        <div class="modal fade" id="success2" tabindex="-1" role="dialog" aria-labelledby="success2Label" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="success2Label">Star-tastic!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Your starzone personal account info has been updated!
+                                                </div>
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>                  
+                                </div>
+                            </div>
+
+                            <!-- content preferences -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold">Content Preferences</h4>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- checkboxes -->
+                                    <div class="row gutters">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <h5 class="mb-3 blue-header">What type of content would you like to see?</h5>
+                                        </div>
+
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                Stellar Astronomy
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" checked>
+                                                <label class="form-check-label" for="defaultCheck2">
+                                                Solar Astronomy
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                                <label class="form-check-label" for="defaultCheck3">
+                                                Planetary Science
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" checked>
+                                                <label class="form-check-label" for="defaultCheck4">
+                                                Galactic Astronomy
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                                                <label class="form-check-label" for="defaultCheck5">
+                                                Astrophysics
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- update button -->
+                                    <div class="row gutters">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <div class="text-right">
+                                                <button type="submit" class="btn btn-primary" id="update-checks-btn" data-toggle="modal" data-target="#success">Update Content Preferences</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Success Modal -->
+                                    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="successLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="successLabel">Star-tastic!</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Your starzone content preferences have been updated. Your newsfeed and celestial event alerts might look different!
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Maddie G 2020</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- ApexCharts JS -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- Custom Javascript -->
+    <script src="js/starzone.js"></script>
+
+</body>
+
+</html>

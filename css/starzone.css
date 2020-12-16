@@ -28,6 +28,39 @@ footer.sticky-footer {
 }
 
 
+
+/* 
+ *  SIDEBAR
+ */
+ .sidebar {
+    background-color:#202225;
+}
+
+.sidebar .nav-item .nav-link span {
+    font-size: 1rem;
+    color: #c4c5c6 !important;
+}
+
+.collapse-item {
+    color: #c4c5c6 !important; 
+    font-size: 0.95rem;
+}
+
+.collapse-inner {
+    background-color: #40444c;
+}
+
+.collapse-item:hover {
+    background-color: #36393f !important;
+}
+
+/* TODO: FIX SIDEBAR HOVER */
+.sidebar .nav-item .nav-link i:hover, .sidebar .nav-item .nav-link span:hover {
+    color: #e1ad01 !important;
+}
+
+
+
 /* 
  *  LOGIN/REGISTER PAGES
  */
@@ -83,39 +116,9 @@ footer.sticky-footer {
 
 #email-field:focus, #password-field:focus {
     outline: none;
-    background-color: #383c46c4;
+    background-color: #8c909b46;
 } 
 
-
-/* 
- *  SIDEBAR
- */
-.sidebar {
-    background-color:#202225;
-}
-
-.sidebar .nav-item .nav-link span {
-    font-size: 1rem;
-    color: #c4c5c6 !important;
-}
-
-.collapse-item {
-    color: #c4c5c6 !important; 
-    font-size: 0.9rem;
-}
-
-.collapse-inner {
-    background-color: #40444c;
-}
-
-.collapse-item:hover {
-    background-color: #36393f !important;
-}
-
-/* TODO: FIX SIDEBAR HOVER */
-.sidebar .nav-item .nav-link i:hover, .sidebar .nav-item .nav-link span:hover {
-    color: #e1ad01 !important;
-}
 
 
 /* 
@@ -139,7 +142,7 @@ footer.sticky-footer {
 
 
 /* 
- *  CELESTIAL EVENTS
+ *  CELESTIAL EVENTS CARD
  */
 .celestial-events {
     list-style-type: none;
@@ -187,8 +190,9 @@ footer.sticky-footer {
 }
 
 
+
 /* 
- *  ASTRONOMER'S FORECAST
+ *  ASTRONOMER'S FORECAST CARD
  */
 .forecast {
 	width: 100%;
@@ -218,7 +222,6 @@ footer.sticky-footer {
 /*  
  *  ANIMATIONS (generated with bounce.js)
  */
-
 .animation-target {
     -webkit-animation: animation 1500ms linear infinite both;
     animation: animation 1500ms linear infinite both;
@@ -228,6 +231,10 @@ footer.sticky-footer {
     width: 6%;
     height: 6%;
     margin-top: 21%;
+}
+
+.loading-row {
+    min-height: 60rem;
 }
 
 @-webkit-keyframes animation { 
@@ -310,3 +317,63 @@ footer.sticky-footer {
     100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, 0, 0, 1); } 
 }
 
+
+
+/* 
+ *  ACCOUNT SETTINGS
+ */
+.form-control {
+    background-color: #383c46;
+    color: #d7d7d8;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px 0px;
+    width: 80%;
+    align-items: end;
+}
+
+.blue-header {
+    color: #99aab5;  
+}
+
+.form-group label {
+    width: 120px;
+    font-size: 17px;
+}
+
+#update-btn, #update-checks-btn, #save-btn {
+    margin-top: 15px;
+    margin-right: 18px;
+    background-color: #4e8496;
+    font-size: 16px;
+    border: none;
+    color: #d7d7d8;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#update-btn:hover, #update-checks-btn:hover, #save-btn:hover {
+    background-color: #285d6e;
+}
+
+#save-btn {
+    display: none;
+}
+
+.form-check-label {
+    width: 80% !important;
+    font-size: 20px !important;
+}
+
+.form-check-input {
+    margin-right: 15px;
+    width: 40px;
+}
+
+*:focus {
+    outline: none;
+} 
