@@ -377,3 +377,18 @@ footer.sticky-footer {
 *:focus {
     outline: none;
 } 
+
+.modal-content, .modal-header {
+    background-color: #36383e;
+    border: none;
+}
+
+
+.modal-body, .modal-footer {
+    background-color: #40444c;
+    border: none;
+}
+
+.modal-footer {
+    padding-top: 0px;
+}
