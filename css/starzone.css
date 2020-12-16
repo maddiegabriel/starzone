@@ -434,7 +434,6 @@ footer.sticky-footer {
     background-color: #383c46;
     margin: 6px 0px;
     border-radius: 10px !important;
-    height: 10rem;
     cursor: pointer !important;
 }
 
@@ -451,7 +450,7 @@ footer.sticky-footer {
 }
 
 .star_searcher {
-    max-height: 60rem;
+    max-height: 45rem;
     overflow: scroll;
 }
 
@@ -476,6 +475,7 @@ footer.sticky-footer {
     margin-bottom: 20px !important;
 }
 
-.star-btn {
-    background-color: #bd8f13;
+.star-image {
+    border-radius: 10px;
+    max-width: 90%;
 }
