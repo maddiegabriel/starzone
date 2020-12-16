@@ -125,7 +125,7 @@ footer.sticky-footer {
  *  NEWS FEED CARD
  */
 .newsfeed {
-    max-height: 62rem;
+    max-height: 54rem;
     overflow: scroll;
 }
 
@@ -140,6 +140,9 @@ footer.sticky-footer {
     border-radius: 10px;
 }
 
+.newsfeed-image:hover {
+    cursor: pointer !important;
+}
 
 /* 
  *  CELESTIAL EVENTS CARD
@@ -234,7 +237,7 @@ footer.sticky-footer {
 }
 
 .loading-row {
-    min-height: 60rem;
+    min-height: 50rem;
 }
 
 @-webkit-keyframes animation { 
@@ -324,7 +327,7 @@ footer.sticky-footer {
  */
 .form-control {
     background-color: #383c46;
-    color: #d7d7d8;
+    color: #c4c5c6;
     border-radius: 5px;
     border: none;
     padding: 10px 10px;
@@ -341,14 +344,14 @@ footer.sticky-footer {
 
 .form-group label {
     width: 120px;
-    font-size: 17px;
+    font-size: 19px;
 }
 
 #update-btn, #update-checks-btn, #save-btn {
     margin-top: 15px;
     margin-right: 18px;
     background-color: #4e8496;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     color: #d7d7d8;
     padding: 10px 10px;
@@ -391,4 +394,76 @@ footer.sticky-footer {
 
 .modal-footer {
     padding-top: 0px;
+}
+
+::placeholder {
+    color: #7a7a80;
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.close {
+    color: #d7d7d8;
+}
+
+.close:hover {
+    color: #e1ad01;
+}
+
+
+/* 
+ * STAR SEARCHER
+ */
+#list_search {
+    width: 100%;
+}
+
+.list-group li {
+    background-color: #383c46;
+    margin: 6px 0px;
+    border-radius: 10px !important;
+    height: 10rem;
+    cursor: pointer !important;
+}
+
+.star-image {
+    border-radius: 10px;
+}
+
+.star-modal {
+    width: 700px;
+}
+
+.star-title:hover {
+    color: #e1ad01;
+}
+
+.star_searcher {
+    max-height: 60rem;
+    overflow: scroll;
+}
+
+.star-modal-card {
+    text-align: left;
+    background-color: #383c46;
+}
+
+.star-modal-card-title {
+    color: #99aab5;
+}
+
+.star-modal-title {
+    color: #649FB2;
+}
+
+.star-table td {
+    padding-right: 20px !important;
+}
+
+.star-table tr {
+    margin-bottom: 20px !important;
+}
+
+.star-btn {
+    background-color: #bd8f13;
 }

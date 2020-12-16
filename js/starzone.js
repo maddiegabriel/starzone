@@ -5,7 +5,7 @@ function update_details() {
     let fields = document.getElementsByClassName('update-detail-field');
     for (i = 0; i < fields.length; i++) {
         fields[i].style.background = 'rgb(202 202 202)';
-        fields[i].style.color = '#383c46';
+        fields[i].style.color = '#6c6c70';
         fields[i].readOnly = false;
     }
     document.getElementById('save-btn').style.display = "inline";
@@ -116,3 +116,15 @@ function render_chart() {
     let cloud_chart = new ApexCharts(document.querySelector("#cloud-forecast"), options);
     cloud_chart.render();
 }
+
+// 
+//  STAR SEARCHER (TODO: cite me from bootstrap docs)
+// 
+$(document).ready(function(){
+    $("#list_search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#star_list li").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});

@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>starzone | follow the stars</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- Custom fonts-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-ui-kit.css" rel="stylesheet"> <!-- TODO :: cite me -->
+    <link href="css/starzone.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" onload="render_chart();">
+    <div id="wrapper">
+
+        <!-- SIDEBAR TODO :: cite me -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- logo -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4" href="dashboard.html">
+                <img id="starzone-logo" src="img/logo.png" width="100%" />
+            </a>
+
+            <!-- Sidebar Item - Dashboard -->
+            <hr class="sidebar-divider my-0 mt-4 mb-4">
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="fas fa-fw fa-rocket"></i>
+                    <span>&nbsp;Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Item - Star Searcher -->
+            <li class="nav-item active">
+                <a class="nav-link" href="starsearcher.html">
+                    <i style="color: #e1ad01 !important;" class="fas fa-fw fa-star"></i>
+                    <span style="color: #e1ad01 !important;">&nbsp;Star Searcher</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Item - Account Menu -->
+            <li class="nav-item active mb-4">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>&nbsp;Account</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="settings.html">Settings</a>
+                        <a class="collapse-item" href="index.html">Logout</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Sidebar toggle -->
+            <div class="text-center d-none d-md-inline mt-4">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+
+        <!-- PAGE CONTENT -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="row mt-4">
+
+                        <div class="col-lg-10 mb-4">
+
+                            <!-- star searcher -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold">Starzone Star Searcher</h4>
+                                </div>
+
+                                <div class="card-body star_searcher">
+
+                                    <!-- TODO: cite from bootstrap docs -->
+                                    <input class="form-control" id="list_search" type="text" placeholder="Start typing to search for a star...">
+                                    <br>
+                                    <ul class="list-group" id="star_list">
+                                      
+                                        <!-- result 1 -->
+                                        <li class="list-group-item" data-toggle="modal" data-target="#result1">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <div><img class="newsfeed-image img-fluid img-responsive" src="img/stars/star1.png" width="100%"></div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h4 class="star-title mt-2">Achernar</h4>
+                                                    <div>
+                                                        <span>Achernar is the ninth brightest star in the sky!</span><br>
+                                                        <span><b>Constellation:</b> eridanus</span><br>
+                                                        <span><b>Coordinates:</b> 01h 37m 42.8s, −57° 14′ 12″</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <!-- result 2 -->
+                                        <li class="list-group-item" data-toggle="modal" data-target="#result2">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <div><img class="newsfeed-image img-fluid img-responsive" src="img/star2.jpg" width="100%"></div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h4 class="star-title mt-2">Achernar</h4>
+                                                    <div>
+                                                        <span>This star is the ninth brightest in the sky!</span><br>
+                                                        <span><b>Constellation:</b> eridanus</span><br>
+                                                        <span><b>Coordinates:</b> 01h 37m 42.8s, −57° 14′ 12″</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Maddie G 2020</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+    
+    <!-- RESULT MODALS -->
+
+    <!-- Result Modal 1 -->
+    <div class="modal fade  align-items-center justify-content-center text-center" id="result1" tabindex="-1" role="dialog" aria-labelledby="result1Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content star-modal">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="result1Label">Achernar</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- star pic -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div><img class="newsfeed-image img-fluid img-responsive" src="img/stars/star1.png" width="100%"></div>
+                        </div>
+
+                        <!-- Nomenclature Card -->
+                        <div class="col-xl-8 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2 star-modal-card">
+                                <div class="card-body pt-3 pb-1">
+                                    <div class="row no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="h4 font-weight-bold text-uppercase mb-3 mt-0 star-modal-card-title">Nomenclature</div>
+                                            <div class="h6 mb-0">
+                                                This star bears the traditional name of Achernar (sometimes spelled Achenar), derived from the Arabic آخر النهر ākhir an-nahr, meaning "The End of the River". This name originally referred to Theta Eridani instead, which latterly was known by the similar traditional name Acamar, with the same etymology. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- coordinates -->
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2 star-modal-card">
+                                <div class="card-body">
+                                    <div class="row no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="h4 font-weight-bold text-uppercase mb-3 star-modal-card-title">Star Coordinates</div>
+                                            <div class="h6 mb-0">
+                                                <table class="star-table">
+                                                    <tr>
+                                                        <td class="font-weight-bold">Right Ascension:</td>
+                                                        <td>01h 37m 42.84548s</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-bold">Declination:</td>
+                                                        <td>–57° 14′ 12.3101″</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-bold">Distance:</td>
+                                                        <td>44.092 parsecs</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- characteristics -->
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2 star-modal-card">
+                                <div class="card-body">
+                                    <div class="row no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="h4 font-weight-bold text-uppercase mb-3 star-modal-card-title">Astrometric Characteristics</div>
+                                            <div class="h6 mb-0">
+                                                <table class="star-table">
+                                                    <tr>
+                                                        <td class="font-weight-bold">Age:</td>
+                                                        <td>37.3 Myr</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-bold">Magnitude:</td>
+                                                        <td>0.4 - 0.6</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-bold">Temperature:</td>
+                                                        <td>~15000 K</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-bold">Mass:</td>
+                                                        <td>6.7 M☉</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-bold">Radius:</td>
+                                                        <td>7.3 × 11.4 R☉</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-bold">Luminosity:</td>
+                                                        <td>3,150 L☉</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary star-btn" data-dismiss="modal">Star this star!</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- ApexCharts JS -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- Custom Javascript -->
+    <script src="js/starzone.js"></script>
+
+</body>
+
+</html>
