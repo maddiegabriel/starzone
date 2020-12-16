@@ -124,7 +124,7 @@ $(document).ready(function(){
     $("#list_search").on("keyup", function() {
         var value = $(this).val().toLowerCase();
         $("#star_list li").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            $(this).toggle($(this).attr("searchterm").indexOf(value) > -1)
         });
     });
 });
