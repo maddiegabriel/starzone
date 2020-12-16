@@ -125,7 +125,7 @@ footer.sticky-footer {
  *  NEWS FEED CARD
  */
 .newsfeed {
-    max-height: 54rem;
+    max-height: 57rem;
     overflow: scroll;
 }
 
@@ -143,6 +143,13 @@ footer.sticky-footer {
 .newsfeed-image:hover {
     cursor: pointer !important;
 }
+
+.news-date {
+    font-size: 15px;
+    margin-top: -2px;
+}
+
+
 
 /* 
  *  CELESTIAL EVENTS CARD
@@ -162,6 +169,11 @@ footer.sticky-footer {
     cursor: pointer !important;
     background-color: #292b2f;
 }
+
+.event-href, .event-href:hover {
+    text-decoration: none !important;
+}
+
 
 .event-date {
     padding-left: 10px;
