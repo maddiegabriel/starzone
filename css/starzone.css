@@ -174,7 +174,6 @@ footer.sticky-footer {
     text-decoration: none !important;
 }
 
-
 .event-date {
     padding-left: 10px;
     border-left: 3px solid #eaeaea;
@@ -194,6 +193,7 @@ footer.sticky-footer {
 
 .event-description {
     margin: 3px 0 5px 20px;
+    color: #c4c5c6 !important;
 }
 
 .event:hover .event-date {
@@ -201,7 +201,7 @@ footer.sticky-footer {
 }
 
 .event:hover .event-description {
-    color: #f2f2f2;
+    color: #f2f2f2 !important;
 }
 
 
@@ -450,7 +450,7 @@ footer.sticky-footer {
 }
 
 .star_searcher {
-    max-height: 45rem;
+    max-height: 50rem;
     overflow: scroll;
 }
 

@@ -95,7 +95,7 @@ function render_chart() {
             width: '80%',
         },
         series: [14, 23, 21, 17, 24],
-        labels: ['Wind', 'Visibility', 'Precipitation', 'Darkness', 'Cloud Cover'],
+        labels: ['Cloud Cover', 'Transparency', 'Precipitation', 'Light Pollution', 'Wind'],
         colors: ['#546E7A', '#4a92a8', '#60ccd9', '#bbf0e8', '#61908a'],
         yaxis: {
             show: false,
@@ -105,7 +105,7 @@ function render_chart() {
         },
         legend: {
             position: 'bottom',
-            fontSize: '17px',
+            fontSize: '16px',
             labels: {
                 colors: '#c4c5c6',
             },
