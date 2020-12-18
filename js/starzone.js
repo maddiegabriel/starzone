@@ -46,47 +46,7 @@ function load_settings() {
 
 
 // 
-//  SIDE NAVIGATION
-// 
-  
-// Toggle the side navigation when clicked
-$("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
-    $("body").toggleClass("sidebar-toggled");
-    $(".sidebar").toggleClass("toggled");
-
-    if ($(".sidebar").hasClass("toggled")) {
-        $('.sidebar .collapse').collapse('hide');
-        document.getElementById("starzone-logo").src = "img/favicon.png";
-        document.getElementById("starzone-logo").style.maxWidth = "4rem";
-    } else {
-        document.getElementById("starzone-logo").src = "img/logo.png";
-        document.getElementById("starzone-logo").style.maxWidth = "20rem";
-    }
-});
-
-
-// Close menu accordions when window is small
-$(window).resize(function() {
-    if ($(window).width() < 768) {
-        $('.sidebar .collapse').collapse('hide');
-        document.getElementById("starzone-logo").src = "img/favicon.png";
-        document.getElementById("starzone-logo").style.maxWidth = "4rem";
-    } else {
-        document.getElementById("starzone-logo").src = "img/logo.png";
-        document.getElementById("starzone-logo").style.maxWidth = "20rem";
-    }
-
-    // Toggle the side navigation when window is resized below 480px
-    if ($(window).width() < 480 && !$(".sidebar").hasClass("toggled")) {
-        $("body").addClass("sidebar-toggled");
-        $(".sidebar").addClass("toggled");
-        $('.sidebar .collapse').collapse('hide');
-    };
-});
-
-
-// 
-//  CLOUD FORECAST POLAR AREA CHART (uses ApexCharts JS library)
+//  CLOUD FORECAST POLAR AREA CHART (built using ApexCharts JS library)
 //
 function render_chart() {
     let options = {
@@ -110,15 +70,15 @@ function render_chart() {
                 colors: '#c4c5c6',
             },
         },
-    
     };
     
     let cloud_chart = new ApexCharts(document.querySelector("#cloud-forecast"), options);
     cloud_chart.render();
 }
 
+
 // 
-//  STAR SEARCHER (TODO: cite me from bootstrap docs)
+//  STAR SEARCHER
 // 
 $(document).ready(function(){
     $("#list_search").on("keyup", function() {
@@ -127,4 +87,47 @@ $(document).ready(function(){
             $(this).toggle($(this).attr("searchterm").indexOf(value) > -1)
         });
     });
+});
+
+
+//
+// SIDEBAR TOGGLE FUNCTIONALITY - Partially drawn from this source:
+// Title: Bootstrap SB UI Kit Sidebar (v 4.1.3)
+// Author: StartBootstrap (2020)
+// Code Version: 
+// Availability: https://github.com/startbootstrap/startbootstrap-sb-admin-2
+//
+
+// Toggle the side navigation when clicked
+$("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
+    $("body").toggleClass("sidebar-toggled");
+    $(".sidebar").toggleClass("toggled");
+
+    if ($(".sidebar").hasClass("toggled")) {
+        $('.sidebar .collapse').collapse('hide');
+        document.getElementById("starzone-logo").src = "img/favicon.png";
+        document.getElementById("starzone-logo").style.maxWidth = "4rem";
+    } else {
+        document.getElementById("starzone-logo").src = "img/logo.png";
+        document.getElementById("starzone-logo").style.maxWidth = "20rem";
+    }
+});
+
+// Close menu accordions when window is small
+$(window).resize(function() {
+    if ($(window).width() < 768) {
+        $('.sidebar .collapse').collapse('hide');
+        document.getElementById("starzone-logo").src = "img/favicon.png";
+        document.getElementById("starzone-logo").style.maxWidth = "4rem";
+    } else {
+        document.getElementById("starzone-logo").src = "img/logo.png";
+        document.getElementById("starzone-logo").style.maxWidth = "20rem";
+    }
+
+    // Toggle the side navigation when window is resized below 480px
+    if ($(window).width() < 480 && !$(".sidebar").hasClass("toggled")) {
+        $("body").addClass("sidebar-toggled");
+        $(".sidebar").addClass("toggled");
+        $('.sidebar .collapse').collapse('hide');
+    };
 });

@@ -32,7 +32,7 @@ footer.sticky-footer {
 /* 
  *  SIDEBAR
  */
- .sidebar {
+.sidebar {
     background-color:#202225;
 }
 
@@ -60,7 +60,6 @@ footer.sticky-footer {
 }
 
 
-
 /* 
  *  LOGIN/REGISTER PAGES
  */
@@ -76,19 +75,19 @@ footer.sticky-footer {
     background-color: #282c33;
     max-width: 450px;
     border-radius: 10px;
-    padding: 35px;
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     margin-bottom: 8rem;
+    padding: 35px;
 }
 
 #login-button {
     background-color: #4e8496;
-    font-size: 20px;
-    border: none;
     color: #d7d7d8;
-    padding: 15px 60px;
+    font-size: 20px;
     text-decoration: none;
+    border: none;
     border-radius: 5px;
+    padding: 15px 60px;
     margin: 15px 20px 40px 20px;
 }
 
@@ -97,17 +96,17 @@ footer.sticky-footer {
 }
 
 #email-field, #password-field {
+    display: inline-block;
+    width: 85%;
     background-color: #383c46;
     color: #d7d7d8;
-    border-radius: 5px;
-    border: none;
-    padding: 15px 32px;
+    font-size: 18px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 32px;
     margin: 5px;
-    width: 85%;
 }
 
 #password-field {
@@ -234,10 +233,152 @@ footer.sticky-footer {
 }
 
 
+/* 
+ *  ACCOUNT SETTINGS
+ */
+.form-control {
+    background-color: #383c46;
+    color: #c4c5c6;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px 0px;
+    width: 80%;
+    align-items: end;
+}
+
+.blue-header {
+    color: #99aab5;  
+}
+
+.form-group label {
+    width: 120px;
+    font-size: 19px;
+}
+
+#update-btn, #update-checks-btn, #save-btn {
+    margin-top: 15px;
+    margin-right: 18px;
+    background-color: #4e8496;
+    font-size: 18px;
+    border: none;
+    color: #d7d7d8;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#update-btn:hover, #update-checks-btn:hover, #save-btn:hover {
+    background-color: #285d6e;
+}
+
+#save-btn {
+    display: none;
+}
+
+.form-check-label {
+    width: 80% !important;
+    font-size: 20px !important;
+}
+
+.form-check-input {
+    margin-right: 15px;
+    width: 40px;
+}
+
+*:focus {
+    outline: none;
+} 
+
+.modal-content, .modal-header {
+    background-color: #36383e;
+    border: none;
+}
+
+.modal-body, .modal-footer {
+    background-color: #40444c;
+    border: none;
+}
+
+.modal-footer {
+    padding-top: 0px;
+}
+
+::placeholder {
+    color: #7a7a80;
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.close {
+    color: #d7d7d8;
+}
+
+.close:hover {
+    color: #e1ad01;
+}
+
+
+/* 
+ * STAR SEARCHER
+ */
+#list_search {
+    width: 100%;
+}
+
+.list-group li {
+    background-color: #383c46;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    margin: 6px 0px;
+}
+
+.star-modal {
+    width: 700px;
+}
+
+.star-title:hover {
+    color: #e1ad01;
+}
+
+.star_searcher {
+    max-height: 50rem;
+    overflow: scroll;
+}
+
+.star-modal-card {
+    text-align: left;
+    background-color: #383c46;
+}
+
+.star-modal-card-title {
+    color: #99aab5;
+}
+
+.star-modal-title {
+    color: #649FB2;
+}
+
+.star-table td {
+    padding-right: 20px !important;
+}
+
+.star-table tr {
+    margin-bottom: 20px !important;
+}
+
+.star-image {
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+
 /*  
  *  ANIMATIONS (generated with bounce.js)
  */
-.animation-target {
+ .animation-target {
     -webkit-animation: animation 1500ms linear infinite both;
     animation: animation 1500ms linear infinite both;
 }
@@ -330,152 +471,4 @@ footer.sticky-footer {
     87.65% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -49.998, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -49.998, 0, 0, 1); }
     89.32% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -49.997, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -49.997, 0, 0, 1); }
     100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, 0, 0, 1); } 
-}
-
-
-
-/* 
- *  ACCOUNT SETTINGS
- */
-.form-control {
-    background-color: #383c46;
-    color: #c4c5c6;
-    border-radius: 5px;
-    border: none;
-    padding: 10px 10px;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 5px 0px;
-    width: 80%;
-    align-items: end;
-}
-
-.blue-header {
-    color: #99aab5;  
-}
-
-.form-group label {
-    width: 120px;
-    font-size: 19px;
-}
-
-#update-btn, #update-checks-btn, #save-btn {
-    margin-top: 15px;
-    margin-right: 18px;
-    background-color: #4e8496;
-    font-size: 18px;
-    border: none;
-    color: #d7d7d8;
-    padding: 10px 10px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-#update-btn:hover, #update-checks-btn:hover, #save-btn:hover {
-    background-color: #285d6e;
-}
-
-#save-btn {
-    display: none;
-}
-
-.form-check-label {
-    width: 80% !important;
-    font-size: 20px !important;
-}
-
-.form-check-input {
-    margin-right: 15px;
-    width: 40px;
-}
-
-*:focus {
-    outline: none;
-} 
-
-.modal-content, .modal-header {
-    background-color: #36383e;
-    border: none;
-}
-
-
-.modal-body, .modal-footer {
-    background-color: #40444c;
-    border: none;
-}
-
-.modal-footer {
-    padding-top: 0px;
-}
-
-::placeholder {
-    color: #7a7a80;
-    opacity: 0.8;
-    font-size: 18px;
-}
-
-.close {
-    color: #d7d7d8;
-}
-
-.close:hover {
-    color: #e1ad01;
-}
-
-
-/* 
- * STAR SEARCHER
- */
-#list_search {
-    width: 100%;
-}
-
-.list-group li {
-    background-color: #383c46;
-    margin: 6px 0px;
-    border-radius: 10px !important;
-    cursor: pointer !important;
-}
-
-.star-image {
-    border-radius: 10px;
-}
-
-.star-modal {
-    width: 700px;
-}
-
-.star-title:hover {
-    color: #e1ad01;
-}
-
-.star_searcher {
-    max-height: 50rem;
-    overflow: scroll;
-}
-
-.star-modal-card {
-    text-align: left;
-    background-color: #383c46;
-}
-
-.star-modal-card-title {
-    color: #99aab5;
-}
-
-.star-modal-title {
-    color: #649FB2;
-}
-
-.star-table td {
-    padding-right: 20px !important;
-}
-
-.star-table tr {
-    margin-bottom: 20px !important;
-}
-
-.star-image {
-    border-radius: 10px;
-    max-width: 90%;
 }
