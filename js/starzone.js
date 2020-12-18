@@ -135,22 +135,16 @@ function load_settings() {
 //  LOGIN FORM VALIDATION
 //
 $('#login-button').prop('disabled', true);
-let loginformisvalid = false;
-
-$('.login-fields').bind('keyup', function() { 
-    if (loginformisvalid) {
-        $('#login-button').prop('disabled', false);
-    }
-});
+let uisvalid, pisvalid = false;
 
 $('#login-email-field').bind('keyup', function() { 
     let u = $("#login-email-field").val();
     if(u.length < 1) {
-        loginformisvalid = false;
+        uisvalid = false;
         document.getElementById('usernamehelp').style.display = "inline";
         document.getElementById('usernameconfirm').style.display = "none";
     } else {
-        loginformisvalid = true;
+        uisvalid = true;
         document.getElementById('usernameconfirm').style.display = "inline";
         document.getElementById('usernamehelp').style.display = "none";
     }
@@ -159,14 +153,19 @@ $('#login-email-field').bind('keyup', function() {
 $('#login-password-field').bind('keyup', function() { 
     let p = $("#login-password-field").val();
     if(p.length < 1) {
-        loginformisvalid = false;
+        pisvalid = false;
         document.getElementById('passwordhelp').style.display = "inline";
     } else {
-        loginformisvalid = true;
+        pisvalid = true;
         document.getElementById('passwordhelp').style.display = "none";
     }
 });
 
+$('.login-fields').bind('keyup', function() { 
+    if (uisvalid && pisvalid) {
+        $('#login-button').prop('disabled', false);
+    }
+});
 
 
 //
@@ -178,16 +177,16 @@ function test_email(address) {
 }
 
 $('#register-button').prop('disabled', true);
-let formisvalid = false;
+let nisvalid, eisvalid, uuisvalid, ppisvalid, cpisvalid = false;
 
 $('#name-field').bind('keyup', function() { 
     let n = $("#name-field").val();
     if(n.length < 1) {
-        formisvalid = false;
+        nisvalid = false;
         document.getElementById('namehelp').style.display = "inline";
         document.getElementById('nameconfirm').style.display = "none";
     } else {
-        formisvalid = true;
+        nisvalid = true;
         document.getElementById('nameconfirm').style.display = "inline";
         document.getElementById('namehelp').style.display = "none";
     }
@@ -196,11 +195,11 @@ $('#name-field').bind('keyup', function() {
 $('#email-field').bind('keyup', function() { 
     let e = $("#email-field").val();
     if(e.length < 5 || !test_email(e)) {
-        formisvalid = false;
+        eisvalid = false;
         document.getElementById('emailhelp').style.display = "inline";
         document.getElementById('emailconfirm').style.display = "none";
     } else {
-        formisvalid = true;
+        eisvalid = true;
         document.getElementById('emailconfirm').style.display = "inline";
         document.getElementById('emailhelp').style.display = "none";
     }
@@ -209,11 +208,11 @@ $('#email-field').bind('keyup', function() {
 $('#username-field').bind('keyup', function() { 
     let u = $("#username-field").val();
     if(u.length < 1) {
-        formisvalid = false;
+        uuisvalid = false;
         document.getElementById('usernamehelp').style.display = "inline";
         document.getElementById('usernameconfirm').style.display = "none";
     } else {
-        formisvalid = true;
+        uuisvalid = true;
         document.getElementById('usernameconfirm').style.display = "inline";
         document.getElementById('usernamehelp').style.display = "none";
     }
@@ -222,11 +221,11 @@ $('#username-field').bind('keyup', function() {
 $('#password-field').bind('keyup', function() { 
     let p = $("#password-field").val();
     if(p.length < 1) {
-        formisvalid = false;
+        ppisvalid = false;
         document.getElementById('passwordhelp').style.display = "inline";
         document.getElementById('passwordconfirm').style.display = "none";
     } else {
-        formisvalid = true;
+        ppisvalid = true;
         document.getElementById('passwordconfirm').style.display = "inline";
         document.getElementById('passwordhelp').style.display = "none";
     }
@@ -236,19 +235,18 @@ $('#confirm-password-field').bind('keyup', function() {
     let p = $("#password-field").val();
     let cp = $("#confirm-password-field").val();
     if(cp.length < 1 || cp !== p) {
-        formisvalid = false;
+        cpisvalid = false;
         document.getElementById('confirmhelp').style.display = "inline";
         document.getElementById('confirmconfirm').style.display = "none";
     } else {
-        formisvalid = true;
+        cpisvalid = true;
         document.getElementById('confirmconfirm').style.display = "inline";
         document.getElementById('confirmhelp').style.display = "none";
     }
 });
 
 $('.reg-fields').bind('keyup', function() { 
-    if (formisvalid) {
-        console.log(formisvalid)
+    if (nisvalid && eisvalid && uuisvalid && ppisvalid && cpisvalid) {
         $('#register-button').prop('disabled', false);
     }
 });
