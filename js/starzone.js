@@ -135,12 +135,10 @@ function load_settings() {
 //  LOGIN FORM VALIDATION
 //
 $('#login-button').prop('disabled', true);
-let formisvalid = false;
+let loginformisvalid = false;
 
 $('.login-fields').bind('keyup', function() { 
-    let e = $("#login-email-field").val().length;
-    let p = $("#login-password-field").val().length;
-    if ( e > 0 &&  p > 0) {
+    if (loginformisvalid) {
         $('#login-button').prop('disabled', false);
     }
 });
@@ -148,11 +146,11 @@ $('.login-fields').bind('keyup', function() {
 $('#login-email-field').bind('keyup', function() { 
     let u = $("#login-email-field").val();
     if(u.length < 1) {
-        formisvalid = false;
+        loginformisvalid = false;
         document.getElementById('usernamehelp').style.display = "inline";
         document.getElementById('usernameconfirm').style.display = "none";
     } else {
-        formisvalid = true;
+        loginformisvalid = true;
         document.getElementById('usernameconfirm').style.display = "inline";
         document.getElementById('usernamehelp').style.display = "none";
     }
@@ -161,13 +159,14 @@ $('#login-email-field').bind('keyup', function() {
 $('#login-password-field').bind('keyup', function() { 
     let p = $("#login-password-field").val();
     if(p.length < 1) {
-        formisvalid = false;
+        loginformisvalid = false;
         document.getElementById('passwordhelp').style.display = "inline";
     } else {
-        formisvalid = true;
+        loginformisvalid = true;
         document.getElementById('passwordhelp').style.display = "none";
     }
 });
+
 
 
 //
@@ -179,7 +178,7 @@ function test_email(address) {
 }
 
 $('#register-button').prop('disabled', true);
-formisvalid = false;
+let formisvalid = false;
 
 $('#name-field').bind('keyup', function() { 
     let n = $("#name-field").val();
@@ -247,9 +246,13 @@ $('#confirm-password-field').bind('keyup', function() {
     }
 });
 
-if (formisvalid) {
-    $('#register-button').prop('disabled', false);
-}
+$('.reg-fields').bind('keyup', function() { 
+    if (formisvalid) {
+        console.log(formisvalid)
+        $('#register-button').prop('disabled', false);
+    }
+});
+
 
 
 
