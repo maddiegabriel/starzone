@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link href="css/sb-ui-kit.css" rel="stylesheet">
     <link href="css/starzone.css" rel="stylesheet">
 
@@ -51,18 +52,22 @@
                                 <small id="usernameconfirm" class="form-text text-muted" style="display:none;"><br>looks good!</small>
 
                                 <input class="reg-fields" id="password-field" type="text" placeholder="password" required />
-                                <small id="passwordhelp" class="form-text text-muted" style="display:none; color: #e1ad01 !important;"><br>please enter a password.</small>
-                                <small id="passwordconfirm" class="form-text text-muted" style="display:none;"><br>looks good!</small>
+                                <small id="passwordhelp" class="form-text text-muted" style="display:none; color: #e1ad01 !important;"><br>please enter a password.<br></small>
+                                <small id="passwordconfirm" class="form-text text-muted" style="display:none;"><br>looks good!<br></small>
 
                                 <input class="reg-fields" id="confirm-password-field" type="text" placeholder="confirm password" required />
                                 <small id="confirmhelp" class="form-text text-muted" style="display:none; color: #e1ad01 !important;"><br>passwords must match.<br></small>
                                 <small id="confirmconfirm" class="form-text text-muted" style="display:none;"><br>looks good!<br></small>
 
-                                <button id="register-button" class="btn btn-primary" type="submit">register</button>
+                                <label class="checkbox-inline mt-4 ml-4">
+                                    <input type="checkbox" checked data-toggle="toggle" class="mt-4" data-onstyle="warning" data-offstyle="grey"> allow <i>starzone</i> location access?
+                                </label>
+
+                                <br><button id="register-button" class="btn btn-primary mt-4" type="submit">register</button>
                             </form>
                         
                             <div>
-                                <a class="mb-4" href="index.html">Already have an account? Login here!</a>
+                                <a class="mb-4" href="index.html">already have an account? login here!</a>
                             </div>
                         </div>
 
@@ -89,6 +94,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
     <!-- Bootstrap core JavaScript-->
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Custom Javascript -->
