@@ -252,6 +252,13 @@ $('.reg-fields').bind('keyup', function() {
 });
 
 
+//
+//  ACCOUNT SETTINGS VALIDATION
+//
+function checkycheck() {
+    $('#update-checks-btn').prop('disabled', false);
+}
+
 
 
 
