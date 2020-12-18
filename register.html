@@ -38,12 +38,12 @@
                     <div class="row justify-content-center mb-4">
                         <div id="login-modal" class="text-center">
                             <form class="needs-validation" action="load_settings.html">
-                                <input id="email-field" type="text" placeholder="name">
-                                <input id="email-field" type="text" placeholder="email">
-                                <input id="email-field" type="text" placeholder="username">
-                                <input id="password-field" type="text" placeholder="password">
-                                <input id="password-field" type="text" placeholder="confirm password">
-                                <input id="login-button" type="button" value="register" onclick="register();">
+                                <input class="reg-fields" id="name-field" type="text" placeholder="name" required />
+                                <input class="reg-fields" id="email-field" type="text" placeholder="email" required />
+                                <input class="reg-fields" id="username-field" type="text" placeholder="username" required />
+                                <input class="reg-fields" id="password-field" type="text" placeholder="password" required />
+                                <input class="reg-fields" id="confirm-password-field" type="text" placeholder="confirm password" required />
+                                <button id="register-button" class="btn btn-primary" type="submit">register</button>
                             </form>
                         
                             <div>

@@ -80,7 +80,7 @@ footer.sticky-footer {
     padding: 35px;
 }
 
-#login-button {
+#login-button, #register-button {
     background-color: #4e8496;
     color: #d7d7d8;
     font-size: 20px;
@@ -91,11 +91,11 @@ footer.sticky-footer {
     margin: 15px 20px 40px 20px;
 }
 
-#login-button:hover {
+#login-button:hover, #register-button:hover {
     background-color: #285d6e;
 }
 
-#email-field, #password-field {
+#email-field, #password-field, #name-field, #username-field, #confirm-password-field, #login-password-field, #login-email-field {
     display: inline-block;
     width: 85%;
     background-color: #383c46;
@@ -109,7 +109,7 @@ footer.sticky-footer {
     margin: 5px;
 }
 
-#password-field {
+#login-password-field, #password-field, #confirm-password-field  {
     -webkit-text-security: circle;
 }
 

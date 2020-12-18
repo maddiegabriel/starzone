@@ -32,22 +32,6 @@ function save_details() {
 
 
 // 
-//  LOGIN / REGISTER
-//
-function register() {
-    window.location.href = "load_settings.html";
-}
-
-function load_dash() {
-    window.location.replace("dashboard.html");
-}
-
-function load_settings() {
-    window.location.replace("settings.html");
-}
-
-
-// 
 //  CLOUD FORECAST POLAR AREA CHART (built using ApexCharts JS library)
 //
 function render_chart() {
@@ -133,3 +117,65 @@ $(window).resize(function() {
         $('.sidebar .collapse').collapse('hide');
     };
 });
+
+
+//
+//  LOADING PAGES
+//
+function load_dash() {
+    window.location.replace("dashboard.html");
+}
+
+function load_settings() {
+    window.location.replace("settings.html");
+}
+
+
+//
+//  LOGIN FORM VALIDATION
+//
+$('#login-button').prop('disabled', true);
+$('.login-fields').bind('keyup', function() { 
+    let e = $("#login-email-field").val().length;
+    let p = $("#login-password-field").val().length;
+    if ( e > 0 &&  p > 0) {
+        $('#login-button').prop('disabled', false);
+    }
+});
+
+//
+//  REGISTER FORM VALIDATION
+//
+$('#register-button').prop('disabled', true);
+$('.reg-fields').bind('keyup', function() { 
+    let formisvalid = true;
+
+    let n = $("#name-field").val();
+    if(n.length < 1) formisvalid = false;
+
+    let e = $("#email-field").val();
+    if(e.length < 5) formisvalid = false;
+
+    let u = $("#username-field").val();
+    if(u.length < 1) formisvalid = false;
+
+    let p = $("#password-field").val();
+    if(p.length < 1) formisvalid = false;
+
+    let cp = $("#confirm-password-field").val();
+    if(cp.length < 1) formisvalid = false;
+    if(cp !== p) formisvalid = false;
+
+    if(!test_email(e)) formisvalid = false;
+    
+    if (formisvalid) {
+        $('#register-button').prop('disabled', false);
+    }
+});
+
+function test_email(address) {
+    let pattern = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return pattern.test(address);
+}
+
+
