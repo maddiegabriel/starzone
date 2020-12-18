@@ -135,6 +135,8 @@ function load_settings() {
 //  LOGIN FORM VALIDATION
 //
 $('#login-button').prop('disabled', true);
+let formisvalid = false;
+
 $('.login-fields').bind('keyup', function() { 
     let e = $("#login-email-field").val().length;
     let p = $("#login-password-field").val().length;
@@ -143,39 +145,112 @@ $('.login-fields').bind('keyup', function() {
     }
 });
 
-//
-//  REGISTER FORM VALIDATION
-//
-$('#register-button').prop('disabled', true);
-$('.reg-fields').bind('keyup', function() { 
-    let formisvalid = true;
-
-    let n = $("#name-field").val();
-    if(n.length < 1) formisvalid = false;
-
-    let e = $("#email-field").val();
-    if(e.length < 5) formisvalid = false;
-
-    let u = $("#username-field").val();
-    if(u.length < 1) formisvalid = false;
-
-    let p = $("#password-field").val();
-    if(p.length < 1) formisvalid = false;
-
-    let cp = $("#confirm-password-field").val();
-    if(cp.length < 1) formisvalid = false;
-    if(cp !== p) formisvalid = false;
-
-    if(!test_email(e)) formisvalid = false;
-    
-    if (formisvalid) {
-        $('#register-button').prop('disabled', false);
+$('#login-email-field').bind('keyup', function() { 
+    let u = $("#login-email-field").val();
+    if(u.length < 1) {
+        formisvalid = false;
+        document.getElementById('usernamehelp').style.display = "inline";
+        document.getElementById('usernameconfirm').style.display = "none";
+    } else {
+        formisvalid = true;
+        document.getElementById('usernameconfirm').style.display = "inline";
+        document.getElementById('usernamehelp').style.display = "none";
     }
 });
 
+$('#login-password-field').bind('keyup', function() { 
+    let p = $("#login-password-field").val();
+    if(p.length < 1) {
+        formisvalid = false;
+        document.getElementById('passwordhelp').style.display = "inline";
+    } else {
+        formisvalid = true;
+        document.getElementById('passwordhelp').style.display = "none";
+    }
+});
+
+
+//
+//  REGISTER FORM VALIDATION
+//
 function test_email(address) {
     let pattern = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return pattern.test(address);
 }
+
+$('#register-button').prop('disabled', true);
+formisvalid = false;
+
+$('#name-field').bind('keyup', function() { 
+    let n = $("#name-field").val();
+    if(n.length < 1) {
+        formisvalid = false;
+        document.getElementById('namehelp').style.display = "inline";
+        document.getElementById('nameconfirm').style.display = "none";
+    } else {
+        formisvalid = true;
+        document.getElementById('nameconfirm').style.display = "inline";
+        document.getElementById('namehelp').style.display = "none";
+    }
+});
+
+$('#email-field').bind('keyup', function() { 
+    let e = $("#email-field").val();
+    if(e.length < 5 || !test_email(e)) {
+        formisvalid = false;
+        document.getElementById('emailhelp').style.display = "inline";
+        document.getElementById('emailconfirm').style.display = "none";
+    } else {
+        formisvalid = true;
+        document.getElementById('emailconfirm').style.display = "inline";
+        document.getElementById('emailhelp').style.display = "none";
+    }
+});
+
+$('#username-field').bind('keyup', function() { 
+    let u = $("#username-field").val();
+    if(u.length < 1) {
+        formisvalid = false;
+        document.getElementById('usernamehelp').style.display = "inline";
+        document.getElementById('usernameconfirm').style.display = "none";
+    } else {
+        formisvalid = true;
+        document.getElementById('usernameconfirm').style.display = "inline";
+        document.getElementById('usernamehelp').style.display = "none";
+    }
+});
+
+$('#password-field').bind('keyup', function() { 
+    let p = $("#password-field").val();
+    if(p.length < 1) {
+        formisvalid = false;
+        document.getElementById('passwordhelp').style.display = "inline";
+        document.getElementById('passwordconfirm').style.display = "none";
+    } else {
+        formisvalid = true;
+        document.getElementById('passwordconfirm').style.display = "inline";
+        document.getElementById('passwordhelp').style.display = "none";
+    }
+});
+
+$('#confirm-password-field').bind('keyup', function() { 
+    let p = $("#password-field").val();
+    let cp = $("#confirm-password-field").val();
+    if(cp.length < 1 || cp !== p) {
+        formisvalid = false;
+        document.getElementById('confirmhelp').style.display = "inline";
+        document.getElementById('confirmconfirm').style.display = "none";
+    } else {
+        formisvalid = true;
+        document.getElementById('confirmconfirm').style.display = "inline";
+        document.getElementById('confirmhelp').style.display = "none";
+    }
+});
+
+if (formisvalid) {
+    $('#register-button').prop('disabled', false);
+}
+
+
 
 

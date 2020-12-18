@@ -39,7 +39,12 @@
                         <div id="login-modal" class="text-center">
                             <form class="needs-validation" action="load_dash.html">
                                 <input class="login-fields" id="login-email-field" type="text" placeholder="username" required />
+                                <small id="usernamehelp" class="form-text text-muted" style="display:none;"><br>please enter your username.</small>
+                                <small id="usernameconfirm" class="form-text text-muted" style="display:none;"><br>looks good!</small>
+
                                 <input class="login-fields" id="login-password-field" type="text" placeholder="password" required />
+                                <small id="passwordhelp" class="form-text text-muted" style="display:none;"><br>please enter your password.<br></small>
+
                                 <button id="login-button" class="btn btn-primary" type="submit">log in</button>
                             </form>
                         
