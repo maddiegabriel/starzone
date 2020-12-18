@@ -1,3 +1,9 @@
+// EVENT LISTENERS
+// const login_form = document.getElementById('login-form');
+// login_form.addEventListener('submit', login);
+
+
+
 // 
 // ACCOUNT SETTINGS
 // 
@@ -28,10 +34,6 @@ function save_details() {
 // 
 //  LOGIN / REGISTER
 //
-function login() {
-    window.location.href = "load_dash.html";
-}
-
 function register() {
     window.location.href = "load_settings.html";
 }
